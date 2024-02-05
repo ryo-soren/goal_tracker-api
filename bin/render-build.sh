@@ -3,7 +3,6 @@
 set -o errexit
 
 bundle install
-bundle exec whenever --update-crontab
 ./bin/rails assets:precompile
 ./bin/rails assets:clean
 
