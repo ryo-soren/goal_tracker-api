@@ -3,6 +3,7 @@ class GoalsController < ApplicationController
     load_and_authorize_resource
 
     def index
+        Goal.check_and_update_unsuccessful
         render json: @goals.order(:deadline), status: 200
     end
 
